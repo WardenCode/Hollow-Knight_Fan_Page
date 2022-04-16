@@ -10,15 +10,16 @@
 //   }
 // });
 
-const resizeImg = (e) => {
-  if (e.target !== e.currentTarget) {
-    let photo = e.target.id;
-    alert(`Hello ${photo}`);
-  }
-  e.stopPropagation();
-};
-
 document.addEventListener("DOMContentLoaded", () => {
-  const wrapper = document.querySelector(".photos");
-  wrapper.addEventListener("click", resizeImg(wrapper), false);
+  let photos = document.querySelectorAll(".photo");
+
+  for (photo of photos) {
+    photo.addEventListener("click", () => {
+      let classes = photo.className.split(" ");
+      classes.includes("small")
+        ? (photo.className = "photo")
+        : (photo.className = "photo small");
+    }, false);
+  };
+  
 });
