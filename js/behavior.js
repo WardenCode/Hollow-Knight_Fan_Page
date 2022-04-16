@@ -20,5 +20,5 @@ const resizeImg = (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector(".photos");
-  wrapper.addEventListener("click", resizeImg(), false);
+  wrapper.addEventListener("click", resizeImg(wrapper), false);
 });
