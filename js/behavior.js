@@ -13,7 +13,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   let photos = document.querySelectorAll(".photo");
 
-  for (photo of photos) {
+  for (let photo of photos) {
     photo.addEventListener("click", () => {
       let classes = photo.className.split(" ");
       classes.includes("small")
