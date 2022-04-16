@@ -11,7 +11,7 @@
 // });
 
 const resizeImg = (photo) => {
-  photo.className.split(" ").classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
+  photo.className.split(" ").includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
 };
 
 const insertListeners = () => {
