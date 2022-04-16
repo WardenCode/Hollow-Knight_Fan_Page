@@ -14,10 +14,6 @@ const resizeImg = (photo) => {
   photo.className.split(" ").includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
 };
 
-const insertListeners = () => {
-  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", resizeImg(e), false));
-};
-
 document.addEventListener("DOMContentLoaded", () => {
-  insertListeners();
+  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", resizeImg(e), false));  
 });
