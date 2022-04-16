@@ -18,8 +18,6 @@ const insertListeners = () => {
   document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", reziseImg(e), false));
 };
 
-const waitThePage = () => {
-  document.addEventListener("DOMContentLoaded", insertListeners(), false);
-};
-
-waitThePage();
+document.addEventListener("DOMContentLoaded", () => {
+  insertListeners();
+});
