@@ -13,7 +13,7 @@
 const resizeImg = (photo) => {
   let classes = photo.className.split(" ");
 
-  classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");  
+  classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
 };
 
 document.addEventListener("DOMContentLoaded", (event) => {
