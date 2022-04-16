@@ -12,6 +12,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", (e) => {
+    console.log(e);
     e.className.split(" ").includes("small") ? (e.className = "photo") : (e.className = "photo small");
   }));
 });
