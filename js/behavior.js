@@ -10,10 +10,8 @@
 //   }
 // });
 
-const resizeImg = (photo) => {
-  photo.className.split(" ").includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
-};
-
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", resizeImg(e), false));  
+  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", (e) => {
+    photo.className.split(" ").includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
+  }));
 });
