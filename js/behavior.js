@@ -15,7 +15,7 @@ const resizeImg = (photo) => {
 };
 
 const insertListeners = () => {
-  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", reziseImg, false));
+  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", reziseImg(e), false));
 };
 
 const waitThePage = () => {
