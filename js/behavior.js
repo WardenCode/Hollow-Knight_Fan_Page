@@ -11,13 +11,15 @@
 // });
 
 const resizeImg = (photo) => {
-  let classes = photo.className.split(" ");
-
-  classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
+  photo.className.split(" ").classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");
 };
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  let photo = document.querySelectorAll(".photo");
+const insertListeners = () => {
+  document.querySelectorAll(".photo").forEach((e) => e.addEventListener("click", reziseImg, false));
+};
 
-  photo.forEach((e) => e.addEventListener("click", reziseImg, false));
-});
+const waitThePage = () => {
+  document.addEventListener("DOMContentLoaded", insertListeners(), false);
+};
+
+waitThePage();
