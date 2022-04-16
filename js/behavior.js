@@ -10,12 +10,14 @@
 //   }
 // });
 
+const resizeImg = (photo) => {
+  let classes = photo.className.split(" ");
+
+  classes.includes("small") ? (photo.className = "photo") : (photo.className = "photo small");  
+};
+
 document.addEventListener("DOMContentLoaded", (event) => {
-    let photo = document.querySelectorAll(".photo");
-    photo.addEventListener("click", () => {
-      let classes = photo.className.split(" ");
-      classes.includes("small")
-        ? (photo.className = "photo")
-        : (photo.className = "photo small");
-    });
+  let photo = document.querySelectorAll(".photo");
+
+  photo.forEach((e) => e.addEventListener("click", reziseImg, false));
 });
