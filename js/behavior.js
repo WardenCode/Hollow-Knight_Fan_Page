@@ -1,11 +1,21 @@
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   for (let i = 0; i < 3; i++) {
+//     let photo = document.getElementById(`${i.toString()}`);
+//     photo.addEventListener("click", () => {
+//       let classes = photo.className.split(" ");
+//       classes.includes("small")
+//         ? (photo.className = "photo")
+//         : (photo.className = "photo small");
+//     });
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", (event) => {
-  for (let i = 0; i < 3; i++) {
-    let photo = document.getElementById(`${i.toString()}`);
+    let photo = document.querySelectorAll(".photo");
     photo.addEventListener("click", () => {
       let classes = photo.className.split(" ");
       classes.includes("small")
         ? (photo.className = "photo")
         : (photo.className = "photo small");
     });
-  }
 });
